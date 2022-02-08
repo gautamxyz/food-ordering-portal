@@ -1,0 +1,226 @@
+POST http://localhost:4000/user/register
+Content-Type: application/json
+
+{
+    "name":"gg02",
+    "email":"g02@gmail.com",
+    "contact_number": "9876543210",
+	"age": 19,
+	"batch": "UG2",
+	"password": "hello"
+}
+
+###
+POST http://localhost:4000/vendor/register
+Content-Type: application/json
+
+{
+    "manager_name":"adi",
+    "email":"adi@gmail.com",
+    "contact_number": "9876543210",
+	"shop_name": "JC",
+	"opening_time": "14:00",
+    "closing_time":"02:00",
+	"password": "hello"
+}
+###
+GET http://localhost:4000/vendor
+
+###
+
+POST http://localhost:4000/vendor/login
+Content-Type: application/json
+
+{    
+    "email":"adi@gmail.com",
+    "password": "hello"
+}
+
+###
+POST http://localhost:4000/vendor/create
+Content-Type: application/json
+
+{    
+     "name": "watermelon juice",
+    "shop_name":"JC",
+   "email": "adi@gmail.com",
+  "price":15,
+  "veg_nonveg":"Veg",
+  "tag":["drink","cold"],
+  "add_on":[{"item":"masala","price":10},{"item":"sugar","price":5}]
+  
+  
+}
+
+###
+POST http://localhost:4000/user/profile
+Content-Type: application/json
+
+{
+    "name": "gg0",
+  "email": "g02@gmail.com",
+  "contact_number": "9876543210",
+  "age": "19",
+  "batch": "UG2",
+  "password": "hello"    
+}
+
+###
+POST http://localhost:4000/user/updatewallet
+Content-Type: application/json
+
+{
+    
+  "email": "gautam@gmail.com"  ,
+  "wallet":70
+}
+
+###
+
+POST http://localhost:4000/user/wallet
+Content-Type: application/json
+
+{
+    
+  "email": "gautam@gmail.com"  
+ 
+}
+
+###
+POST http://localhost:4000/vendor/viewitems
+Content-Type: application/json
+
+{
+    
+  "email": "adi@gmail.com"  
+ 
+}
+
+###
+
+POST http://localhost:4000/vendor/deleteitems
+Content-Type: application/json
+
+{
+  "name":"oreo shake" 
+}
+
+###
+POST http://localhost:4000/vendor/edititem
+Content-Type: application/json
+
+{    
+     "name": "orange juice",
+    "shop_name":"JC",
+   "email": "adi@gmail.com",
+  "price":12,
+  "veg_nonveg":"Veg",
+  "tag":["drink","cold"],
+  "add_on":[{"item":"masala","price":15},{"item":"sugar","price":5}]
+  
+  
+}
+
+###
+POST http://localhost:4000/vendor/finditem
+Content-Type: application/json
+
+{
+    
+  "id":  "61ef97d384565218c7950465",
+  "email":"adi@gmail.com"
+ 
+}
+
+###
+
+GET http://localhost:4000/user/foods
+
+###
+
+POST http://localhost:4000/user/placeorder
+Content-Type: application/json
+
+{    
+     "name": "orange juice",
+    "shop_name":"JC",
+   "email": "gautam@gmail.com",
+  "price":20,
+  "quantity":1,
+  "placed_time":"17:00",
+  "status":"Ready for pickup",
+  "add_on":[{"item":"masala","price":15},{"item":"sugar","price":5}]
+  
+  
+}
+###
+POST http://localhost:4000/vendor/vendororder
+Content-Type: application/json
+
+{
+    
+  
+  "email":"adi@gmail.com"
+ 
+}
+###
+POST http://localhost:4000/user/myorders
+Content-Type: application/json
+
+{
+    
+  
+  "email":"gautam@gmail.com"
+ 
+}
+###
+POST http://localhost:4000/vendor/changestatus
+Content-Type: application/json
+
+{
+    
+  "_id":"61f0db837c469222f189a8c8",
+  "status":"Rejected",
+  "email":"adi@gmail.com"
+  
+ 
+}
+###
+POST http://localhost:4000/vendor/nextstage
+Content-Type: application/json
+
+{
+    
+  "id":"61f0f8aa0680fd3bf668257d"
+  
+  
+ 
+}
+###
+POST http://localhost:4000/user/placeorder
+Content-Type: application/json
+
+{    
+     "name": "orange juice",
+    "shop_name":"JC",
+   "email": "gautam@gmail.com",
+  "price":20,
+  "quantity":1,
+  "placed_time":"01:00",
+  "status":"Placed",
+  "add_on":[{"item":"masala","price":15}]
+  
+  
+}
+###
+
+POST http://localhost:4000/user/cutwallet
+Content-Type: application/json
+
+{
+    
+  
+  "email":"gautam@gmail.com",
+  "bil":30
+ 
+}
